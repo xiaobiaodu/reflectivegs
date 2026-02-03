@@ -1,0 +1,305 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="RGS">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RGS</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/video_comparison.js" defer></script>
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎬</text></svg>">
+
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+
+            <h1 class="title is-1 publication-title">RGS: Reflection-aware Gaussian Splatting via Learning Geometry Continuity for Reflective Objects</h1>
+            <br>
+            <div class="is-size-5 publication-authors">
+              <p align="center">
+
+
+</p>
+            </div>
+
+
+              <br>
+
+
+<!--            <div class="is-size-5 publication-venue">-->
+<!--              SIGGRAPH Asia 2024-->
+<!--            </div>-->
+
+            <div class="is-size-5 publication-authors">
+<!--
+              <span class="author-block">
+                Anonymous Authors</span>
+-->
+            </div>
+
+
+<!--
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+-->
+
+                <!--
+                <span class="link-block">
+                  <a class="external-link button is-normal is-rounded is-dark" title="Coming soon!" disabled>
+                    <span class="icon">
+                        <i class="far fa-images"></i>
+                    </span>
+                    <span>Data</span>
+                    </a>
+                  </span> -->
+    
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container is-max-desktop">
+        <!-- <video id="teaser" width="100%" playsinline controls autoplay loop muted>
+            <source src="static/videos/teaser.mp4" type="video/mp4" />
+        </video> -->
+        <img src="static/teaser.png" alt="">
+<script>
+    document.getElementById('teaser').play();
+</script>
+    </div>
+  </section>
+    
+    
+  <section class="section">
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <h2 class="title is-3">Abstract</h2>
+      <div class="content has-text-justified">
+          <p>
+           Gaussian Splatting has significantly improved the quality of novel view synthesis with explicit Gaussian representation.
+        However, we observed that existing 3D Gaussian Splatting methods (3DGS) often suffer from surface collapse issues on reflective regions, and thus produce inferior geometry and low-quality specular.
+        In this work, we propose a physically-based deferred rendering framework, named Reflection-aware Gaussian Splatting (RGS), that can accurately model specular regions and improve novel view synthesis performance. 
+        Specifically, we found that a powerful 3D foundation model can provide a strong 3D geometric prior to foster correct geometric modeling.
+        Based on this, we propose a cross-view shape consistency regularization to regularize the geometry surface with the large model prior and cross-view constraints.
+        In this manner, our RGS can produce smoother geometric surfaces on reflective regions while reducing geometric hollows. 
+        To further improve rendering results on reflective regions, we present a reflection-aware densification strategy that is designed to capture specular variations across various views. With this strategy, our RGS is able to render novel views of objects in higher quality.
+        Extensive experiments demonstrate our method consistently renders high-quality reflective objects, achieving state-of-the-art performance.
+                  
+          </p>
+      </div>
+    </div>
+  </section>
+
+
+  
+  </section>
+       
+   
+     
+           
+       
+<section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-4">Novel View Synthesis Comparisons</h2>
+      Here, we provide the novel view synthesis comparisons of our proposed RGS with existing methods.
+      <div class="tabs-widget">
+        <div class="tabs is-centered">
+          <ul class="is-marginless">
+          </ul>
+        </div>
+        <div class="tabs-content">
+          <div>
+            <div class="tabs-widget">
+              <div class="tabs-content">
+                  <video class="video" width=100% loop playsinline muted autoplay controls
+                    src="./static/videos/nvs.mp4"></video>
+                  <canvas></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+       <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-4">Glossy Bell Comparisons</h2>
+      Here, we provide the novel view synthesis and normal comparisons of our proposed RGS with 3DGS-DR.
+      <div class="tabs-widget">
+        <div class="tabs is-centered">
+          <ul class="is-marginless">
+          </ul>
+        </div>
+        <div class="tabs-content">
+          <div>
+            <div class="tabs-widget">
+              <div class="tabs-content">
+                  <video class="video" width=100% loop playsinline muted autoplay controls
+                    src="./static/videos/bell.mp4"></video>
+                  <canvas></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-4">Relighting Application</h2>
+      Here, we provide the relighting results, compared with GS-IR.
+      <div class="tabs-widget">
+        <div class="tabs is-centered">
+          <ul class="is-marginless">
+          </ul>
+        </div>
+        <div class="tabs-content">
+          <div>
+            <div class="tabs-widget">
+              <div class="tabs-content">
+                  <video class="video" width=100% loop playsinline muted autoplay controls
+                    src="./static/videos/relighting.mp4"></video>
+                  <canvas></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section> -->
+
+
+<!-- <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-4">Decomposition results</h2>
+      Here, we provide the decompositon results of our proposed RGS.
+      <div class="tabs-widget">
+        <div class="tabs is-centered">
+          <ul class="is-marginless">
+          </ul>
+        </div>
+        <div class="tabs-content">
+          <div>
+            <div class="tabs-widget">
+              <div class="tabs-content">
+                  <video class="video" width=100% loop playsinline muted autoplay controls
+                    src="./static/videos/decompose.mp4"></video>
+                  <canvas></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section> -->
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-4">Interactive Comparisons</h2>
+      <p>
+        Here we display interactive videos comparing our proposed RGS with 3DGS-DR. See more details in the paper. <br><br>
+        Select an object below:
+      </p>
+      <br>  
+      <div class="tabs-widget">
+        <div class="tabs is-centered is-toggle is-toggle-rounded is-small">
+          <ul class="is-marginless">
+            <li><a>toaster</a></li>
+            <li><a>helmet</a></li>
+            <li><a>car</a></li>
+            <li><a>materials</a></li>
+          </ul>
+        </div>
+        <div class="content has-text-centered is-size-7-mobile">
+          Interactive visualization. Hover or tap to move the split.
+        </div>
+        <div class="tabs-content">
+          <!-- Begin. -->
+
+            <div class="video-comparison" data-label="3DGS-DR" data-label2="Ours">
+              <video class="video" width=100% loop playsinline muted
+                src="./static/videos/toaster.mp4"></video>
+              <canvas></canvas>
+            </div>
+            <div class="video-comparison" data-label="3DGS-DR" data-label2="Ours">
+              <video class="video" width=100% loop playsinline muted
+                src="./static/videos/helmet.mp4"></video>
+              <canvas></canvas>
+            </div>
+            <div class="video-comparison" data-label="3DGS-DR" data-label2="Ours">
+              <video class="video" width=100% loop playsinline muted
+                src="./static/videos/car.mp4"></video>
+              <canvas></canvas>
+            </div>
+            <div class="video-comparison" data-label="3DGS-DR" data-label2="Ours">
+              <video class="video" width=100% loop playsinline muted
+                src="./static/videos/materials.mp4"></video>
+              <canvas></canvas>
+            </div>
+          <!-- End. -->
+        </div>
+      </div>
+    </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+                This webpage is based on the project page for <a href="https://camp-nerf.github.io">CamP</a>. The video comparison tool is from the <a
+                href="https://dorverbin.github.io/refnerf/index.html">Ref-NeRF</a> project.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+      
+      
+</body>
+
+</html>
