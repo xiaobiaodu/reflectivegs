@@ -97,6 +97,12 @@
             <source src="static/videos/teaser.mp4" type="video/mp4" />
         </video> -->
         <img src="static/teaser.png" alt="">
+        <p>   <b>Motivation:</b> Existing state-of-the-art reflective 3DGS approaches, 3DGS-DR in (d), struggle to precisely reconstruct the reflective surface,
+           leading to unsatisfactory specular novel view synthesis.
+     Traditional foundation models cannot estimate the correct normal in (a) and depth in (b) due to view-dependent ambiguity. 
+     We propose to use VGGT in (c) with cross-view geometry constraints for accurate reflective surface supervision.  
+     Thus, our proposed RGS in (e) is a simple yet effective method to regularize the specular surface for reflective objects. 
+     Our RGS achieves high-quality novel-view synthesis compared to its ground truth in (f).</p>
 <script>
     document.getElementById('teaser').play();
 </script>
@@ -111,22 +117,35 @@
       <h2 class="title is-3">Abstract</h2>
       <div class="content has-text-justified">
           <p>
-           Gaussian Splatting has significantly improved the quality of novel view synthesis with explicit Gaussian representation.
-        However, we observed that existing 3D Gaussian Splatting methods (3DGS) often suffer from surface collapse issues on reflective regions, and thus produce inferior geometry and low-quality specular.
-        In this work, we propose a physically-based deferred rendering framework, named Reflection-aware Gaussian Splatting (RGS), that can accurately model specular regions and improve novel view synthesis performance. 
-        Specifically, we found that a powerful 3D foundation model can provide a strong 3D geometric prior to foster correct geometric modeling.
-        Based on this, we propose a cross-view shape consistency regularization to regularize the geometry surface with the large model prior and cross-view constraints.
-        In this manner, our RGS can produce smoother geometric surfaces on reflective regions while reducing geometric hollows. 
-        To further improve rendering results on reflective regions, we present a reflection-aware densification strategy that is designed to capture specular variations across various views. With this strategy, our RGS is able to render novel views of objects in higher quality.
-        Extensive experiments demonstrate our method consistently renders high-quality reflective objects, achieving state-of-the-art performance.
-                  
+Gaussian Splatting has significantly improved the quality of novel view synthesis with explicit Gaussian representation.
+However, we observed that existing 3D Gaussian Splatting methods (3DGS) often suffer from surface collapse issues on reflective regions, and thus produce inferior geometry and low-quality specular.
+In this work, we propose a physically-based deferred rendering framework, named Reflection-aware Gaussian Splatting (RGS), that can accurately model specular regions and improve novel view synthesis performance. 
+Specifically, we found that a powerful 3D foundation model can provide a strong 3D geometric prior to foster correct geometric modeling.
+Based on this, we propose a cross-view shape consistency regularization to regularize the geometry surface with the large model prior and cross-view constraints.
+In this manner, our RGS can produce smoother geometric surfaces on reflective regions while reducing geometric hollows. 
+To further improve rendering results on reflective regions, we present a reflection-aware densification strategy that is designed to capture specular variations across various views. With this strategy, our RGS is able to render novel views of objects in higher quality.
+Extensive experiments demonstrate our method consistently renders high-quality reflective objects, achieving state-of-the-art performance.  
           </p>
       </div>
     </div>
   </section>
 
 
-  
+    <section class="section">
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Method</h2>
+        <img src="static/method.jpg" alt="">
+      <div class="content has-text-justified">
+          <p>
+         <b>Pipeline of our proposed RGS.</b>
+        Our method with the 2D Gaussian representation can render appearance and geometry maps with a learnable HDR map. 
+        We utilize VGGT inherent with cross-view constraints to provide accurate geometry regularization.
+        RGS typically focuses on the specular capture for high-quality novel view synthesis. 
+          </p>
+      </div>
+    </div>
+  </section>
   </section>
        
    
